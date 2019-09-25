@@ -1,0 +1,23 @@
+{
+  "name": "project-one",
+  "version": "1.0.0",
+  "description": "# Rhythm Radar",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JordenRagels/project-one.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JordenRagels/project-one/issues"
+  },
+  "homepage": "https://github.com/JordenRagels/project-one#readme",
+  "devDependencies": {
+    "cypress": "^3.4.1"
+  }
+}
