@@ -14,13 +14,20 @@ describe('Simple Test', () => {
 
 describe('QA Tests for Project One', () => {
     
-    it('Visits the Rhythm Radar Page', () => {
-        cy.visit('localhost:5500/index.html')
+    it('Visits the Rhythm Radar Page', () => { 
+        cy.visit('localhost:5500/index.html') // application phase
     })
 
     it('Should be able to search for a city and state', () => {
-        cy.get('#inputCity').type('Asheville')
-        cy.get('#inputState').select('NC')
+        cy.get('#inputCity').type('Asheville') // action phase
+        .should('have.value', 'Asheville') // assertion of application state
+        cy.get('#inputState').select('NC')  // action phase
+        .should('have.value', 'NC')
+    })
+
+    it('Clicks submit button and makes an API call', () => {
+        cy.get('#submitButton').click()
+        cy.get('#div1').find('#theTable')
     })
 })
 
