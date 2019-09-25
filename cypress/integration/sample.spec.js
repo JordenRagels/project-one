@@ -13,8 +13,14 @@ describe('Simple Test', () => {
     // 3) Make an assertion about the resulting application state.
 
 describe('QA Tests for Project One', () => {
+    
     it('Visits the Rhythm Radar Page', () => {
         cy.visit('localhost:5500/index.html')
+    })
+
+    it('Should be able to search for a city and state', () => {
+        cy.get('#inputCity').type('Asheville')
+        cy.get('#inputState').select('NC')
     })
 })
 
